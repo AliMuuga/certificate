@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ali Muunganirwa • Certificate Verification</title>
+  
+  <!-- Bootstrap & FontAwesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <!-- Favicon -->
+    <link rel="icon" type="image/png" href="C:/Users/alith/OneDrive/Desktop/certificate/assets/Favi.png">
+</head>
+
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .card-header {
+      font-weight: 600;
+      font-size: 1rem;
+      background: #f1f3f5;
+    }
+    .btn-primary {
+      background-color: #e11d48 !important; /* ALX red */
+      border: none;
+      font-weight: 600;
+      border-radius: 6px;
+      padding: 10px 18px;
+    }
+    .btn-primary:hover {
+      background-color: #be123c !important;
+    }
+    .list-group-item {
+      font-size: 0.95rem;
+    }
+    .validation-link {
+      font-size: 0.9rem;
+      margin-top: 12px;
+    }
+    .validation-link a {
+      color: #0ea5e9;
+      text-decoration: none;
+    }
+    .validation-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="mx-auto py-4" style="max-width:1080px">
+    <div class="card">
+      <h5 class="card-header">
+        <i class="fa-solid fa-user-graduate me-2"></i>
+        ALI MUUNGANIRWA certificate for Short Specializations
+      </h5>
+      <div class="card-body">
+        <div class="d-flex flex-column w-100">
+          <!-- Certificate image -->
+          <img width="100%" src="assets/Cetificate.png" 
+               alt="Certificate of Ali Muunganirwa" class="mb-2 rounded">
+          <!-- Download button -->
+          <a class="btn btn-primary" rel="noopener" 
+             href="31172ed5-484a-44fe-be4a-20c2de089b3d.png" download>
+            <i class="fa-solid fa-download me-2"></i>
+            Download certificate
+          </a>
+        </div>
+
+        <!-- Certificate info -->
+        <div class="row mt-3">
+          <div class="col-12 col-md-6">
+            <ul class="list-group">
+              <li class="list-group-item">Awarded to: <strong>ALI MUUNGANIRWA</strong></li>
+              <li class="list-group-item">Curriculum: Short Specializations</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6">
+            <ul class="list-group">
+              <li class="list-group-item">Issued at: 12th February 2025</li>
+              <li class="list-group-item" id="verifiedAt">Verified at: —</li>
+            </ul>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // auto-fill current verified timestamp
+    const el = document.getElementById('verifiedAt');
+    const now = new Date();
+    const pad = n => String(n).padStart(2,'0');
+    const month = pad(now.getMonth()+1);
+    const d = `${month}/${pad(now.getDate())}/${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+    el.textContent = "Verified at: " + d;
+  </script>
+</body>
+</html>
